@@ -5,11 +5,10 @@ function walker (currentPage = 1, totalPages = 0, _config = {}) {
 
   // assign config default values
   // *no defaults on params for comments
-  const config = {
+  const config = Object.assign({
     threshold: 1, // threshold to show prev/next pages
-    showPages: 5, // total pages to generate
-    ..._config
-  }
+    showPages: 5 // total pages to generate
+  }, _config)
 
   let { threshold, showPages } = config
 

@@ -25,6 +25,11 @@ test('do not walk on last page (currentPage 11, totalPages 11)', () => {
   const pages = [7,8,9,10,11]
   expect(walks).toEqual(pages)
 })
+test('result is smaller than default', () => {
+  const walks = walker(1, 3)
+  const pages = [1,2,3]
+  expect(walks).toEqual(pages)
+})
 
 // Custom config
 test('walk forward 2 pages (currentPage 4, threshold 2)', () => {

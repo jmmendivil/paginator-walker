@@ -12,6 +12,9 @@ function walker (currentPage = 1, totalPages = 0, _config = {}) {
 
   let { threshold, showPages } = config
 
+  // adjust if total result should be smaller
+  if (totalPages < showPages) showPages = totalPages
+
   let firstPage = (currentPage - showPages) + threshold + 1 // +1 because 0 index
 
   // check left threshold margin ( min 1 )

@@ -1,0 +1,7 @@
+const walker = require('./src/index')
+const firstFivePages = walker(1, 11)
+const pagesFromFive = walker(5, 11, { threshold: 3, showPages: 7 })
+const foo = walker(4, 11, { threshold: 2})
+console.log(firstFivePages)
+console.log(pagesFromFive)
+console.log(foo)
